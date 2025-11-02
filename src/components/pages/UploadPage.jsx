@@ -25,12 +25,12 @@ export default function UploadPage() {
     <div className="upload-page">
       <h1 className="upload-title">🪐 Kundli Chart Generator</h1>
       <p className="upload-desc">
-        Upload your <code>bhava_chart.json</code> file
+        Upload your <code>.json</code> file
       </p>
 
       <div className="upload-btn-container">
         <label className="upload-btn">
-          Choose JSON File
+          Choose Your' File
           <input type="file" accept=".json" onChange={handleUpload} hidden />
         </label>
       </div>

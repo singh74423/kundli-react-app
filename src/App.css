@@ -1,9 +1,25 @@
-body, html {
+/* ---------- Global Styles ---------- */
+body,
+html {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background:
+    linear-gradient(rgba(255, 248, 232, 0.9), rgba(255, 248, 232, 0.9)),
+    url("/background_image2.0.png") no-repeat center center fixed;
+  background-size: cover;
   font-family: "Poppins", sans-serif;
   height: 100%;
+  transition: background 0.5s ease-in-out;
+}
+
+/* optional soft glow effect */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: -1;
 }
 
 /* ---------- Upload Page ---------- */
@@ -14,24 +30,26 @@ body, html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #ffffff;
 }
 
 .upload-title {
-  font-size: 26px;
+  font-size: 28px;
   color: #000;
   margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .upload-desc {
   color: #444;
   margin-bottom: 50px;
+  font-size: 15px;
 }
 
 .upload-btn-container {
   margin-top: 20px;
 }
 
+/* main upload button */
 .upload-btn {
   background: #000;
   color: #fff;
@@ -39,15 +57,24 @@ body, html {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
+  border: 2px solid #000;
+  transition: all 0.3s ease;
 }
-.upload-btn:hover { background: #333; }
+
+/* 🪄 Hover — invert colors */
+.upload-btn:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 /* ---------- Chart Page ---------- */
 .chart-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #fff;
   align-items: center;
 }
 
@@ -59,6 +86,8 @@ body, html {
   align-items: center;
   border-bottom: 1px solid #eee;
   padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(3px);
 }
 
 .back-btn {
@@ -70,8 +99,14 @@ body, html {
   border-radius: 6px;
   padding: 6px 14px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-.back-btn:hover { background: #333; }
+
+.back-btn:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
 
 .title {
   margin: 0;
@@ -86,6 +121,7 @@ body, html {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 30px;
 }
 
 .chart {
@@ -94,6 +130,8 @@ body, html {
   height: 400px;
   background: #fff;
   border: 2px solid #000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
 }
 
 .chart-lines {
@@ -112,19 +150,61 @@ body, html {
   font-size: 12px;
   font-weight: 500;
 }
-.house-num { font-weight: bold; font-size: 11px; }
-.planets   { white-space: pre-line; font-size: 12px; }
+.house-num {
+  font-weight: bold;
+  font-size: 11px;
+}
+.planets {
+  white-space: pre-line;
+  font-size: 12px;
+}
 
 /* House coordinates */
-.house-1  { top: 45%; left: 45%; }
-.house-2  { top: 20%; left: 55%; }
-.house-3  { top: 10%; left: 70%; }
-.house-4  { top: 25%; left: 82%; }
-.house-5  { top: 45%; left: 88%; }
-.house-6  { top: 65%; left: 80%; }
-.house-7  { top: 75%; left: 60%; }
-.house-8  { top: 70%; left: 42%; }
-.house-9  { top: 75%; left: 25%; }
-.house-10 { top: 65%; left: 10%; }
-.house-11 { top: 45%; left: 4%; }
-.house-12 { top: 25%; left: 12%; }
+.house-1 {
+  top: 45%;
+  left: 45%;
+}
+.house-2 {
+  top: 20%;
+  left: 55%;
+}
+.house-3 {
+  top: 10%;
+  left: 70%;
+}
+.house-4 {
+  top: 25%;
+  left: 82%;
+}
+.house-5 {
+  top: 45%;
+  left: 88%;
+}
+.house-6 {
+  top: 65%;
+  left: 80%;
+}
+.house-7 {
+  top: 75%;
+  left: 60%;
+}
+.house-8 {
+  top: 70%;
+  left: 42%;
+}
+.house-9 {
+  top: 75%;
+  left: 25%;
+}
+.house-10 {
+  top: 65%;
+  left: 10%;
+}
+.house-11 {
+  top: 45%;
+  left: 4%;
+}
+.house-12 {
+  top: 25%;
+  left: 12%;
+}
