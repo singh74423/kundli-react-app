@@ -1,0 +1,130 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+/* ---------- Upload Page ---------- */
+.upload-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+}
+
+.upload-title {
+  font-size: 26px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.upload-desc {
+  color: #444;
+  margin-bottom: 50px;
+}
+
+.upload-btn-container {
+  margin-top: 20px;
+}
+
+.upload-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.upload-btn:hover { background: #333; }
+
+/* ---------- Chart Page ---------- */
+.chart-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+  align-items: center;
+}
+
+.header-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.back-btn {
+  position: absolute;
+  left: 40px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.back-btn:hover { background: #333; }
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.chart-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chart {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.chart-lines {
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+
+/* House boxes */
+.house {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+}
+.house-num { font-weight: bold; font-size: 11px; }
+.planets   { white-space: pre-line; font-size: 12px; }
+
+/* House coordinates */
+.house-1  { top: 45%; left: 45%; }
+.house-2  { top: 20%; left: 55%; }
+.house-3  { top: 10%; left: 70%; }
+.house-4  { top: 25%; left: 82%; }
+.house-5  { top: 45%; left: 88%; }
+.house-6  { top: 65%; left: 80%; }
+.house-7  { top: 75%; left: 60%; }
+.house-8  { top: 70%; left: 42%; }
+.house-9  { top: 75%; left: 25%; }
+.house-10 { top: 65%; left: 10%; }
+.house-11 { top: 45%; left: 4%; }
+.house-12 { top: 25%; left: 12%; }
